@@ -5,21 +5,21 @@
 class Mcs < Formula
   desc "CLI for controlling your connected vehicle"
   homepage "https://github.com/cv/mcs"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cv/mcs/releases/download/v0.2.2/mcs_Darwin_x86_64.tar.gz"
-      sha256 "d0029a238f5d2636ed25adfb54b9db17c4884b48541e430d797f09a5ae00dc24"
+      url "https://github.com/cv/mcs/releases/download/v0.2.3/mcs_Darwin_x86_64.tar.gz"
+      sha256 "de74ab1e820521a77205ef12c085da4ca9708f706310795e48cc2fdfd6590032"
 
       def install
         bin.install "mcs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cv/mcs/releases/download/v0.2.2/mcs_Darwin_arm64.tar.gz"
-      sha256 "2b7af9903e58b6380d02cba539608ea9303b32758b191b3efccb6fe7f6767568"
+      url "https://github.com/cv/mcs/releases/download/v0.2.3/mcs_Darwin_arm64.tar.gz"
+      sha256 "efa295636470e7c9aa276597084c39b0d64bc451ab16110615b1a5a6c4ea42ff"
 
       def install
         bin.install "mcs"
@@ -29,15 +29,15 @@ class Mcs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cv/mcs/releases/download/v0.2.2/mcs_Linux_x86_64.tar.gz"
-      sha256 "1e6e55ed137e79aea756446daf6d8727a593e71a0bb26e5709ab033dd75b2a55"
+      url "https://github.com/cv/mcs/releases/download/v0.2.3/mcs_Linux_x86_64.tar.gz"
+      sha256 "b052e509e953c20d8e6e56c239937e80e14bd24290a802875bfaabf774ec4c89"
       def install
         bin.install "mcs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cv/mcs/releases/download/v0.2.2/mcs_Linux_arm64.tar.gz"
-      sha256 "8b9d354e13388ed6e2eeacdef03ef1fac90444f4d180d51e9e7f6548cdbf6a80"
+      url "https://github.com/cv/mcs/releases/download/v0.2.3/mcs_Linux_arm64.tar.gz"
+      sha256 "1edbf817c6019d10ff3055d42b7704a9c686602253935aa34b2d243df1b03319"
       def install
         bin.install "mcs"
       end
