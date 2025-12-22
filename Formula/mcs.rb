@@ -5,21 +5,21 @@
 class Mcs < Formula
   desc "CLI for controlling your connected vehicle"
   homepage "https://github.com/cv/mcs"
-  version "0.6.2"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cv/mcs/releases/download/v0.6.2/mcs_Darwin_x86_64.tar.gz"
-      sha256 "c5954476b97590f773b2574ec6926f82c3c91054ca01e57828be00f15d320a26"
+      url "https://github.com/cv/mcs/releases/download/v0.7.0/mcs_Darwin_x86_64.tar.gz"
+      sha256 "988f51a6ab009f7c87be74cc7447daf249a17bb60346bc1c60291488c8cbd969"
 
       def install
         bin.install "mcs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cv/mcs/releases/download/v0.6.2/mcs_Darwin_arm64.tar.gz"
-      sha256 "4e52958191ac13017d629ba73395d294c24bc752e8fd6bba4abc71861bd50167"
+      url "https://github.com/cv/mcs/releases/download/v0.7.0/mcs_Darwin_arm64.tar.gz"
+      sha256 "203a3bb1c06f3383f1097374a4e3d861f518a3d801d4ab72cf255a90dce05670"
 
       def install
         bin.install "mcs"
@@ -29,19 +29,23 @@ class Mcs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cv/mcs/releases/download/v0.6.2/mcs_Linux_x86_64.tar.gz"
-      sha256 "e85b056774186b291355038b2433ca15cdc403119cbd3a89352e6cc44580aa5d"
+      url "https://github.com/cv/mcs/releases/download/v0.7.0/mcs_Linux_x86_64.tar.gz"
+      sha256 "20de2bd3f5d0febda388d4c2dab98da0ea2c428f06468b90805af3a239e85ade"
       def install
         bin.install "mcs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cv/mcs/releases/download/v0.6.2/mcs_Linux_arm64.tar.gz"
-      sha256 "3a6edb009d320c924040448e2a59a83182510cf8c6d2cd2f63a6d43d8e92b52a"
+      url "https://github.com/cv/mcs/releases/download/v0.7.0/mcs_Linux_arm64.tar.gz"
+      sha256 "5e8fb1748580123a01535280c1a926a32e0825e7c973a596e1117ac63609c60e"
       def install
         bin.install "mcs"
       end
     end
+  end
+
+  def post_install
+    system "#{bin}/mcs", "skill", "install"
   end
 
   test do
