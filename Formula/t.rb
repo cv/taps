@@ -5,21 +5,21 @@
 class T < Formula
   desc "Display time in various timezones using IATA airport codes"
   homepage "https://github.com/cv/t"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cv/t/releases/download/v0.1.0/t_Darwin_x86_64.tar.gz"
-      sha256 "dbce2f63f922bb19b0ae9e3eac825cddb8f0b309fc49ab9aae37f4a75f8aacf8"
+      url "https://github.com/cv/t/releases/download/v0.2.0/t_Darwin_x86_64.tar.gz"
+      sha256 "eae9574040e0e4baff9b447519190808fb615ed5376b296a01cd5de6b253dc71"
 
       def install
         bin.install "t"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cv/t/releases/download/v0.1.0/t_Darwin_arm64.tar.gz"
-      sha256 "2c14ead3cbbd281039bf30fcd8e1519f7dfab06cba7d294d9b3733e1ab2bb6eb"
+      url "https://github.com/cv/t/releases/download/v0.2.0/t_Darwin_arm64.tar.gz"
+      sha256 "cc507df3337ebdf6591c7b88989977f6ddb0cf223daef56c25c298732463c99c"
 
       def install
         bin.install "t"
@@ -29,15 +29,15 @@ class T < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cv/t/releases/download/v0.1.0/t_Linux_x86_64.tar.gz"
-      sha256 "c99d9971f0b47c719271f3ad54577c9c411b11ff18300a322783d547ad572b48"
+      url "https://github.com/cv/t/releases/download/v0.2.0/t_Linux_x86_64.tar.gz"
+      sha256 "8b8c2d0fdf92210bcb3357983853c41e091ee865fb420118bdb97ec763db2776"
       def install
         bin.install "t"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cv/t/releases/download/v0.1.0/t_Linux_arm64.tar.gz"
-      sha256 "7eb5dfc2fcc54c93103a3da2e8789f2387ff536cb92b7865da3758103a9b746c"
+      url "https://github.com/cv/t/releases/download/v0.2.0/t_Linux_arm64.tar.gz"
+      sha256 "6289dff32a7a130b6f49ac75f3ae2967361468ca6fa5a82a98d74d9f472f4557"
       def install
         bin.install "t"
       end
