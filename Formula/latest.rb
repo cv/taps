@@ -1,25 +1,25 @@
 class Latest < Formula
   desc "Find the latest version of any command, package, or library"
   homepage "https://github.com/cv/latest"
-  version "0.2.4"
+  version "0.2.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cv/latest/releases/download/v0.2.4/latest-aarch64-apple-darwin.tar.xz"
-      sha256 "5e7665d5ec5d68a435a7db0ee07a39d89b0a011368ef51e0255d62ecca17a38e"
+      url "https://github.com/cv/latest/releases/download/v0.2.5/latest-aarch64-apple-darwin.tar.xz"
+      sha256 "799aa13328dadfdbed9d9c09d7c8568f76991a4f75a622bf58beacc41963baa2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cv/latest/releases/download/v0.2.4/latest-x86_64-apple-darwin.tar.xz"
-      sha256 "0081a7e3375f6a9bcf1e6db28cc8c51f87a4b73800703dd0cf883f4f5f7cb78d"
+      url "https://github.com/cv/latest/releases/download/v0.2.5/latest-x86_64-apple-darwin.tar.xz"
+      sha256 "9c41ffec1a3cd6a830c363b3883580a2ff6e280025dc5eddacaa7804cbd4e389"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/cv/latest/releases/download/v0.2.4/latest-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7181650f9660389bdfbd25aa4620e24891f0ef23d7c3a7676d3f0af808fc4c16"
+      url "https://github.com/cv/latest/releases/download/v0.2.5/latest-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d5016830c05326efb2746080cdea895a5ccdcc3e57906491e88fe9100a137055"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cv/latest/releases/download/v0.2.4/latest-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "15fd8fcda8e2ae850c326c2836452ef2424160b87fa4dcebc85bffbf224df0c2"
+      url "https://github.com/cv/latest/releases/download/v0.2.5/latest-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "48cc855d5a3a353aa13b8e59d6d1586fdb995872b413f6ec05721a8c4a4ba3df"
     end
   end
   license "MIT"
