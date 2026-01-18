@@ -2,8 +2,8 @@ class BashAst < Formula
   desc "Parse bash scripts to JSON AST using GNU Bash's actual parser"
   homepage "https://github.com/cv/bash-ast"
   url "https://github.com/cv/bash-ast.git",
-      tag:      "v0.1.2",
-      revision: "a9a9a1e359305c143d3eacd47e1bbd2f05fd75d2"
+      tag:      "v0.1.3",
+      revision: "0052d7db181762f231b6579b5d7ab4bb2929de31"
   license "GPL-3.0-only"
   head "https://github.com/cv/bash-ast.git", branch: "main"
 
@@ -16,6 +16,9 @@ class BashAst < Formula
 
     # Initialize and update git submodules (bash source)
     system "git", "submodule", "update", "--init", "--recursive"
+
+    # Set version from formula version (strips 'v' prefix if present)
+    inreplace "Cargo.toml", /^version = .*/, "version = \"#{version}\""
 
     # Build and install the release binary
     system "cargo", "install", *std_cargo_args
