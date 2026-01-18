@@ -3,7 +3,7 @@ class BashAst < Formula
   homepage "https://github.com/cv/bash-ast"
   url "https://github.com/cv/bash-ast.git",
       tag:      "v0.1.1",
-      revision: "eda49aafc6f31f541363bd5472538f9d8834f41e"
+      revision: "708cb81cd784587585736db309d5452400ab6a90"
   license "GPL-3.0-only"
   head "https://github.com/cv/bash-ast.git", branch: "main"
 
