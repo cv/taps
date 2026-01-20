@@ -2,8 +2,8 @@ class BashAst < Formula
   desc "Parse bash scripts to JSON AST using GNU Bash's actual parser"
   homepage "https://github.com/cv/bash-ast"
   url "https://github.com/cv/bash-ast.git",
-      tag:      "v0.1.4",
-      revision: "3d2942b0329df823e5ace14fdce83293a4bf0b9d"
+      tag:      "v0.1.5",
+      revision: "61b23907a587f66f0895ce6b3a7867cf81c56bea"
   license "GPL-3.0-only"
   head "https://github.com/cv/bash-ast.git", branch: "main"
 
